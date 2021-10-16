@@ -1,0 +1,66 @@
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.gallery {
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+}
+
+.gallery__img {
+  transition: 0.3s ease;
+  scroll-snap-align: start;
+  margin-bottom: 10px;
+  min-width: 100vw;
+  object-fit: cover;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav__link:hover > .nav__item {
+  background-color: green;
+}
+
+#radio-1:checked ~ .nav #bullet-1 {
+  background: yellow;
+}
+
+#radio-2:checked ~ .nav #bullet-2 {
+  background: yellow;
+}
+
+#radio-3:checked ~ .nav #bullet-3 {
+  background: yellow;
+}
+
+#radio-2:checked ~ .gallery #image-1 {
+  transform: translateX(-100%);
+}
+#radio-2:checked ~ .gallery #image-2 {
+  transform: translateX(-100%);
+}
+#radio-2:checked ~ .gallery #image-3 {
+  transform: translateX(-100%);
+}
+
+#radio-3:checked ~ .gallery #image-1 {
+  transform: translateX(-200%);
+}
+#radio-3:checked ~ .gallery #image-2 {
+  transform: translateX(-200%);
+}
+#radio-3:checked ~ .gallery #image-3 {
+  transform: translateX(-200%);
+}
+
+.nav__item {
+  width: 4em;
+  height: 4em;
+  border-radius: 100%;
+  background: red;
+}
