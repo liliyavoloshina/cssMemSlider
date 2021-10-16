@@ -4,6 +4,10 @@
   --tertiary-color: #c4aa93;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 ::selection {
   background-color: var(--secondary-color);
 }
@@ -20,11 +24,11 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-rows: minmax(40vh, 70vh) 10em;
+  grid-template-rows: minmax(40vh, 70vh) 7em;
   grid-template-columns: 2fr 1fr;
   row-gap: 2em;
-  max-width: 900px;
-  max-height: 80vh;
+  max-width: 50em;
+  margin: 2em;
   margin: 2em;
   padding: 2em;
   border-radius: 3em;
@@ -55,50 +59,23 @@ body {
 
 /* gallery logic  */
 
-#radio-2:checked ~ .gallery #image-1 {
-  transform: translateX(-100%);
-}
-
-#radio-2:checked ~ .gallery #image-2 {
-  transform: translateX(-100%);
-}
-
-#radio-2:checked ~ .gallery #image-3 {
-  transform: translateX(-100%);
-}
-
+#radio-2:checked ~ .gallery #image-1,
+#radio-2:checked ~ .gallery #image-2,
+#radio-2:checked ~ .gallery #image-3,
 #radio-2:checked ~ .gallery #image-4 {
   transform: translateX(-100%);
 }
 
-#radio-3:checked ~ .gallery #image-1 {
-  transform: translateX(-200%);
-}
-
-#radio-3:checked ~ .gallery #image-2 {
-  transform: translateX(-200%);
-}
-
-#radio-3:checked ~ .gallery #image-3 {
-  transform: translateX(-200%);
-}
-
+#radio-3:checked ~ .gallery #image-1,
+#radio-3:checked ~ .gallery #image-2,
+#radio-3:checked ~ .gallery #image-3,
 #radio-3:checked ~ .gallery #image-4 {
   transform: translateX(-200%);
 }
 
-#radio-4:checked ~ .gallery #image-1 {
-  transform: translateX(-300%);
-}
-
-#radio-4:checked ~ .gallery #image-2 {
-  transform: translateX(-300%);
-}
-
-#radio-4:checked ~ .gallery #image-3 {
-  transform: translateX(-300%);
-}
-
+#radio-4:checked ~ .gallery #image-1,
+#radio-4:checked ~ .gallery #image-2,
+#radio-4:checked ~ .gallery #image-3,
 #radio-4:checked ~ .gallery #image-4 {
   transform: translateX(-300%);
 }
@@ -115,57 +92,30 @@ body {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
-  padding-top: 10px;
+  padding-top: .2em;
   font-size: 2.5em;
   transition: 0.3s ease;
 }
 
 /* text logic  */
 
-#radio-2:checked ~ .text #text-1 {
-  transform: translateX(-100%);
-}
-
-#radio-2:checked ~ .text #text-2 {
-  transform: translateX(-100%);
-}
-
-#radio-2:checked ~ .text #text-3 {
-  transform: translateX(-100%);
-}
-
+#radio-2:checked ~ .text #text-1,
+#radio-2:checked ~ .text #text-2,
+#radio-2:checked ~ .text #text-3,
 #radio-2:checked ~ .text #text-4 {
   transform: translateX(-100%);
 }
 
-#radio-3:checked ~ .text #text-1 {
-  transform: translateX(-200%);
-}
-
-#radio-3:checked ~ .text #text-2 {
-  transform: translateX(-200%);
-}
-
-#radio-3:checked ~ .text #text-3 {
-  transform: translateX(-200%);
-}
-
+#radio-3:checked ~ .text #text-1,
+#radio-3:checked ~ .text #text-2,
+#radio-3:checked ~ .text #text-3,
 #radio-3:checked ~ .text #text-4 {
   transform: translateX(-200%);
 }
 
-#radio-4:checked ~ .text #text-1 {
-  transform: translateX(-300%);
-}
-
-#radio-4:checked ~ .text #text-2 {
-  transform: translateX(-300%);
-}
-
-#radio-4:checked ~ .text #text-3 {
-  transform: translateX(-300%);
-}
-
+#radio-4:checked ~ .text #text-1,
+#radio-4:checked ~ .text #text-2,
+#radio-4:checked ~ .text #text-3,
 #radio-4:checked ~ .text #text-4 {
   transform: translateX(-300%);
 }
@@ -188,6 +138,10 @@ body {
   cursor: pointer;
 }
 
+.nav__item:active {
+  background: var(--primary-color);
+}
+
 .nav__item:hover .nav__indicator {
   background: var(--secondary-color);
   border-color: var(--secondary-color) !important;
@@ -199,7 +153,7 @@ body {
   box-sizing: border-box;
   border-radius: 100%;
   background: var(--primary-color);
-  transition: .5s ease;
+  transition: 0.5s ease;
 }
 
 /* nav logic  */
@@ -239,8 +193,9 @@ body {
 @media (max-width: 768px) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr repeat(2, 4em);
-    row-gap: 1em;
+    grid-template-rows: 1fr repeat(2, 5em);
+    row-gap: .5em;
+    padding: 1em;
   }
 
   .gallery {
