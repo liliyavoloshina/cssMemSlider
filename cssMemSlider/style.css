@@ -92,7 +92,6 @@ body {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
-  padding-top: .2em;
   font-size: 2.5em;
   transition: 0.3s ease;
 }
@@ -132,8 +131,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4em;
-  height: 4em;
+  width: 3em;
+  height: 3em;
   border-radius: 100%;
   cursor: pointer;
 }
@@ -158,35 +157,18 @@ body {
 
 /* nav logic  */
 
-#radio-1:checked ~ .nav #bullet-1 .nav__indicator {
-  background: transparent;
-  border: 5px solid var(--primary-color);
-}
-
-#radio-2:checked ~ .nav #bullet-2 .nav__indicator {
-  background: transparent;
-  border: 5px solid var(--primary-color);
-}
-
-#radio-2:checked ~ .nav #bullet-2 .nav__indicator:hover {
-  border: 5px solid var(--secondary-color);
-}
-
-#radio-3:checked ~ .nav #bullet-3 .nav__indicator {
-  background: transparent;
-  border: 5px solid var(--primary-color);
-}
-
-#radio-3:checked ~ .nav #bullet-3 .nav__indicator:hover {
-  border: 5px solid var(--secondary-color);
-}
-
+#radio-1:checked ~ .nav #bullet-1 .nav__indicator,
+#radio-2:checked ~ .nav #bullet-2 .nav__indicator,
+#radio-3:checked ~ .nav #bullet-3 .nav__indicator,
 #radio-4:checked ~ .nav #bullet-4 .nav__indicator {
   background: transparent;
   border: 5px solid var(--primary-color);
 }
 
-#radio-4:checked ~ .nav #bullet-4 .nav__indicator:hover {
+#radio-1:checked ~ .nav #bullet-1 .nav__indicator:hover,
+#radio-2:checked ~ .nav #bullet-2 .nav__indicator:hover,
+#radio-4:checked ~ .nav #bullet-4 .nav__indicator:hover,
+#radio-3:checked ~ .nav #bullet-3 .nav__indicator:hover {
   border: 5px solid var(--secondary-color);
 }
 
@@ -194,7 +176,7 @@ body {
   .wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr repeat(2, 5em);
-    row-gap: .5em;
+    row-gap: 0.5em;
     padding: 1em;
   }
 
@@ -230,7 +212,6 @@ body {
   }
 
   .text__item {
-    padding-top: 0;
     font-size: 2em;
   }
 }
