@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mem Slider</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -15,23 +18,20 @@
     <input type="radio" name="radio" id="radio-1" class="radio" checked />
     <input type="radio" name="radio" id="radio-2" class="radio" />
     <input type="radio" name="radio" id="radio-3" class="radio" />
+    <input type="radio" name="radio" id="radio-4" class="radio" />
 
     <div class="gallery">
-      <img class="gallery__img" id="image-1"
-        src="https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1529&q=80"
-        alt="Kitten" />
-      <img class="gallery__img" id="image-2"
-        src="https://images.unsplash.com/photo-1620196244884-ff187fd4bf99?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        alt="Kitten" />
-      <img class="gallery__img" id="image-3"
-        src="https://images.unsplash.com/photo-1590673822672-f441ca17c683?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80"
-        alt="Kitten" />
+      <img class="gallery__img" id="image-1" src="./img/coffin.jpg" alt="Coffin Meme" />
+      <img class="gallery__img" id="image-2" src="./img/cat.jpg" alt="Cat Meme" />
+      <img class="gallery__img" id="image-3" src="./img/tellme.jpg" alt="Tell Me Meme" />
+      <img class="gallery__img" id="image-4" src="./img/tasks.jpg" alt="Piper Meme" />
     </div>
 
     <div class="text">
-      <div class="text__item" id="text-1">Text 1</div>
-      <div class="text__item" id="text-2">Text 2</div>
-      <div class="text__item" id="text-3">Text 3</div>
+      <div class="text__item" id="text-1">When you forget to submit in time</div>
+      <div class="text__item" id="text-2">Blaming Student 1</div>
+      <div class="text__item" id="text-3">"Media Queries is not so hard"</div>
+      <div class="text__item" id="text-4">Me and uncompleted tasks</div>
     </div>
 
     <nav class="nav">
@@ -42,6 +42,9 @@
         <div class="nav__indicator"></div>
       </label>
       <label class="nav__item" id="bullet-3" for="radio-3">
+        <div class="nav__indicator"></div>
+      </label>
+      <label class="nav__item" id="bullet-4" for="radio-4">
         <div class="nav__indicator"></div>
       </label>
     </nav>
