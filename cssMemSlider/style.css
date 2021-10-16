@@ -1,27 +1,34 @@
 :root {
-  --base-color: #60481e;
-  --base-hover: #b9a179;
+  --primary-color: #60481e;
+  --secondary-color: #ebd3be;
+  --tertiary-color: #c4aa93;
+}
+
+::selection {
+  background-color: var(--secondary-color);
 }
 
 body {
-  background-color: #ebd3be;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   font-family: 'Germania One', cursive;
+  background-color: var(--secondary-color);
 }
 
 .wrapper {
   display: grid;
+  grid-template-rows: minmax(40vh, 70vh) 10em;
   grid-template-columns: 2fr 1fr;
   row-gap: 2em;
-  /* grid-template-rows: 1fr 10em; */
-  grid-template-rows: minmax(40vh, 70vh) 10em;
   max-width: 900px;
   max-height: 80vh;
   margin: 2em;
+  padding: 2em;
+  border-radius: 3em;
+  background-color: var(--tertiary-color);
 }
 
 .radio {
@@ -34,7 +41,8 @@ body {
   grid-column: 1 / 3;
   display: flex;
   overflow: hidden;
-  border: 10px solid var(--base-color);
+  border-radius: 3em;
+  border: 10px solid var(--primary-color);
 }
 
 .gallery__img {
@@ -58,6 +66,7 @@ body {
 #radio-2:checked ~ .gallery #image-3 {
   transform: translateX(-100%);
 }
+
 #radio-2:checked ~ .gallery #image-4 {
   transform: translateX(-100%);
 }
@@ -73,6 +82,7 @@ body {
 #radio-3:checked ~ .gallery #image-3 {
   transform: translateX(-200%);
 }
+
 #radio-3:checked ~ .gallery #image-4 {
   transform: translateX(-200%);
 }
@@ -88,6 +98,7 @@ body {
 #radio-4:checked ~ .gallery #image-3 {
   transform: translateX(-300%);
 }
+
 #radio-4:checked ~ .gallery #image-4 {
   transform: translateX(-300%);
 }
@@ -104,8 +115,8 @@ body {
   flex-shrink: 0;
   width: 100%;
   height: 100%;
-  font-size: 2.5em;
   padding-top: 10px;
+  font-size: 2.5em;
   transition: 0.3s ease;
 }
 
@@ -122,6 +133,7 @@ body {
 #radio-2:checked ~ .text #text-3 {
   transform: translateX(-100%);
 }
+
 #radio-2:checked ~ .text #text-4 {
   transform: translateX(-100%);
 }
@@ -137,6 +149,7 @@ body {
 #radio-3:checked ~ .text #text-3 {
   transform: translateX(-200%);
 }
+
 #radio-3:checked ~ .text #text-4 {
   transform: translateX(-200%);
 }
@@ -152,6 +165,7 @@ body {
 #radio-4:checked ~ .text #text-3 {
   transform: translateX(-300%);
 }
+
 #radio-4:checked ~ .text #text-4 {
   transform: translateX(-300%);
 }
@@ -175,8 +189,8 @@ body {
 }
 
 .nav__item:hover .nav__indicator {
-  background: var(--base-hover);
-  border-color: var(--base-hover) !important;
+  background: var(--secondary-color);
+  border-color: var(--secondary-color) !important;
 }
 
 .nav__indicator {
@@ -184,39 +198,42 @@ body {
   height: 2em;
   box-sizing: border-box;
   border-radius: 100%;
-  background: var(--base-color);
+  background: var(--primary-color);
+  transition: .5s ease;
 }
 
 /* nav logic  */
 
 #radio-1:checked ~ .nav #bullet-1 .nav__indicator {
   background: transparent;
-  border: 5px solid var(--base-color);
+  border: 5px solid var(--primary-color);
 }
 
 #radio-2:checked ~ .nav #bullet-2 .nav__indicator {
   background: transparent;
-  border: 5px solid var(--base-color);
+  border: 5px solid var(--primary-color);
 }
 
 #radio-2:checked ~ .nav #bullet-2 .nav__indicator:hover {
-  border: 5px solid var(--base-hover);
+  border: 5px solid var(--secondary-color);
 }
 
 #radio-3:checked ~ .nav #bullet-3 .nav__indicator {
   background: transparent;
-  border: 5px solid var(--base-color);
+  border: 5px solid var(--primary-color);
 }
+
 #radio-3:checked ~ .nav #bullet-3 .nav__indicator:hover {
-  border: 5px solid var(--base-hover);
+  border: 5px solid var(--secondary-color);
 }
 
 #radio-4:checked ~ .nav #bullet-4 .nav__indicator {
   background: transparent;
-  border: 5px solid var(--base-color);
+  border: 5px solid var(--primary-color);
 }
+
 #radio-4:checked ~ .nav #bullet-4 .nav__indicator:hover {
-  border: 5px solid var(--base-hover);
+  border: 5px solid var(--secondary-color);
 }
 
 @media (max-width: 768px) {
@@ -249,7 +266,7 @@ body {
     height: 1.5em;
     box-sizing: border-box;
     border-radius: 100%;
-    background: var(--base-color);
+    background: var(--primary-color);
   }
 
   .text {
