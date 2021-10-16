@@ -1,6 +1,26 @@
-img {
-  display: block;
-  max-width: 100%;
+:root {
+  --base-color: rgb(255, 144, 110);
+  --base-hover: rgb(253, 0, 0);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 2em;
+  /* grid-template-rows: minmax(30%, 60%) 5em; */
+  max-width: 1440px;
+}
+
+.radio {
+  display: none;
 }
 
 /* gallery styles  */
