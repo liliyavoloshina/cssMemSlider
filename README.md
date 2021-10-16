@@ -1,0 +1,1 @@
+Liliya Voloshina's cssMemSlider task
