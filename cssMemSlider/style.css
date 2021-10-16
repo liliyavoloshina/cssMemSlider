@@ -8,15 +8,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2em;
+  margin: 0;
+  /* padding: 2em; */
 }
 
 .wrapper {
   display: grid;
   grid-template-columns: 2fr 1fr;
   row-gap: 2em;
-  /* grid-template-rows: minmax(30%, 60%) 5em; */
+  grid-template-rows: minmax(10em, 20em) 5em;
   max-width: 1440px;
+  margin: 2em;
 }
 
 .radio {
@@ -63,6 +65,48 @@ body {
 }
 
 #radio-3:checked ~ .gallery #image-3 {
+  transform: translateX(-200%);
+}
+
+/* text styles */
+
+.text {
+  grid-column: 1 / 2;
+  display: flex;
+  font-size: 3em;
+  overflow: hidden;
+}
+
+.text__item {
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.3s ease;
+  background-color: green;
+}
+
+/* text logic  */
+
+#radio-2:checked ~ .text #text-1 {
+  transform: translateX(-100%);
+}
+
+#radio-2:checked ~ .text #text-2 {
+  transform: translateX(-100%);
+}
+
+#radio-2:checked ~ .text #text-3 {
+  transform: translateX(-100%);
+}
+
+#radio-3:checked ~ .text #text-1 {
+  transform: translateX(-200%);
+}
+
+#radio-3:checked ~ .text #text-2 {
+  transform: translateX(-200%);
+}
+
+#radio-3:checked ~ .text #text-3 {
   transform: translateX(-200%);
 }
 
