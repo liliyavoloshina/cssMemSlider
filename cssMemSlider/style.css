@@ -46,7 +46,7 @@ body {
   display: flex;
   overflow: hidden;
   border-radius: 3em;
-  border: 10px solid var(--primary-color);
+  border: 0.4rem solid var(--primary-color);
 }
 
 .gallery__img {
@@ -162,14 +162,14 @@ body {
 #radio-3:checked ~ .nav #bullet-3 .nav__indicator,
 #radio-4:checked ~ .nav #bullet-4 .nav__indicator {
   background: transparent;
-  border: 5px solid var(--primary-color);
+  border: 0.2rem solid var(--primary-color);
 }
 
 #radio-1:checked ~ .nav #bullet-1 .nav__indicator:hover,
 #radio-2:checked ~ .nav #bullet-2 .nav__indicator:hover,
 #radio-4:checked ~ .nav #bullet-4 .nav__indicator:hover,
 #radio-3:checked ~ .nav #bullet-3 .nav__indicator:hover {
-  border: 5px solid var(--secondary-color);
+  border: 0.2rem solid var(--secondary-color);
 }
 
 @media (max-width: 768px) {
