@@ -1,1 +1,1 @@
-Liliya Voloshina's cssMemSlider task
+# Pure CSS slider
